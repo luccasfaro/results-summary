@@ -1,0 +1,245 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Container */
+/* Your - result */
+
+#container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 45em;
+    margin: 10em auto;
+    border-radius: 25px;
+    box-shadow: 0px 4px 15px var(--light-lavender);
+}
+
+#your-result {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 1em;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 25px;
+}
+
+#your-result h2 {
+    color: var(--light-lavender);
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#your-result #result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    margin-bottom: 2em;
+}
+
+#result-number {
+    font-size: 4em;
+    font-weight: 600;
+    color: var(--white);
+}
+
+#your-result #result p {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--light-lavender);
+}
+
+#your-result h3 {
+    font-size: 1.8em;
+    color: var(--white);
+    margin-bottom: .4em;
+}
+
+#your-result p {
+    font-size: 1em;
+    font-weight: 500;
+    max-width: 70%;
+    color: var(--light-lavender);
+    text-align: center;
+    margin-bottom: .8em;
+}
+
+/* Summary */
+
+#summary {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#summary h2 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+#reaction, #memory, #verbal, #visual {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin-bottom: 2.3em;
+}
+
+#summary span {
+    margin-left: 1.8em;
+}
+
+#summary p {
+    font-weight: 700;
+}
+
+#summary .percent {
+    margin: 0;
+    font-weight: 500;
+    color: var(--dark-gray-blue);
+}
+
+#reaction {
+    background-image: url(../images/icon-reaction.svg);
+    background-repeat: no-repeat;
+}
+#memory {
+    background-image: url(../images/icon-memory.svg);
+    background-repeat: no-repeat;
+}
+#verbal {
+    background-image: url(../images/icon-verbal.svg);
+    background-repeat: no-repeat;
+}
+#visual {
+    background-image: url(../images/icon-visual.svg);
+    background-repeat: no-repeat;
+}
+
+#reaction-text {
+    color: hsl(0, 100%, 67%);
+}
+#memory-text {
+    color: hsl(39, 100%, 56%);
+}
+#verbal-text {
+    color: hsl(166, 100%, 37%);
+}
+#visual-text {
+    color: hsl(234, 85%, 45%);
+}
+
+#btn {
+    width: 70%;
+    padding: 1em;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    font-size: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#btn:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+/* Media Query */
+
+@media (max-width: 450px) {
+    #container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #your-result {
+        width: 100%;
+        border-radius: 0px 0px 25px 25px;
+    }
+
+    #your-result h2 {
+        font-size: 1.4em;
+        margin-bottom: 1em;
+    }
+
+    #your-result #result {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.5em;
+    }
+
+    #result-number {
+        font-size: 3.5em;
+    }
+    
+    #your-result #result p {
+        font-size: .9em;
+    }
+
+    #your-result h3 {
+        font-size: 1.6em;
+        font-weight: 500;
+    }
+    
+    #your-result p {
+        font-size: 1em;
+        max-width: 70%;
+        margin-bottom: 0;
+    }
+    
+    /* Summary */
+
+    #summary {
+        width: 100%;
+    }
+    
+    #summary h2 {
+        font-size: 1.4em;
+        margin: 1.2em auto;
+    }
+    
+    #reaction, #memory, #verbal, #visual {
+        width: 75%;
+        font-size: 1.1em;
+        background-size: 7%;
+    }
+
+    #visual {
+        margin-bottom: 1.3em;
+    }
+    
+    #btn {
+        width: 80%;
+        padding: 1em 1em;
+        border: none;
+        border-radius: 30px;
+        background-color: var(--dark-gray-blue);
+        color: var(--white);
+        font-size: 1.2em;
+        cursor: pointer;
+        margin-bottom: .6em;
+    }
+}
